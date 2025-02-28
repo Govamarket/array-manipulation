@@ -232,3 +232,191 @@ function allElement() {
 
 allElement();
 
+
+/*
+9. includes()
+Problem: Write a function that checks if the number 5 is present in an array.
+Solution below
+*/ 
+
+function checkMate() {
+    const value = [2,3,4,5,6,7,8,9];
+    console.log(value.includes(50));
+};
+
+checkMate();
+
+
+const cart = ["iPhone 15", "MacBook Pro", "AirPods"];
+
+// Function to add an item if it's not already in the cart
+function addToCart(item) {
+    if (cart.includes(item)) {
+        console.log(`${item} is already in your cart.`);
+    } else {
+        cart.push(item);
+        console.log(`${item} added to your cart.`);
+    }
+}
+
+addToCart("MacBook Pro"); // Output: MacBook Pro is already in your cart.
+addToCart("Apple Watch"); // Output: Apple Watch added to your cart.
+
+console.log(cart); 
+// Output: ["iPhone 15", "MacBook Pro", "AirPods", "Apple Watch"]
+
+
+/*
+10. indexOf()
+Problem: Find the position of the first occurrence of the number 7 in an array.
+solution*/
+
+function indexPattern() {
+    const arrIndex = [1,2,3,4,5,6,7,8,9];
+
+    const  indexof = arrIndex.indexOf(7);
+    console.log(indexof);
+}
+
+indexPattern();
+
+
+/*
+11. lastIndexOf()
+Problem: Find the last occurrence of the number 3 in an array.
+12. push()
+
+solution below*/
+
+function lastIndex() {
+    const arrLastIndex = [1,2,3,4,5];
+    const findLastIndex = arrLastIndex.lastIndexOf(3);
+    console.log(findLastIndex);
+}
+
+lastIndex();
+
+/*
+7. some()
+Problem: Check if an array of strings contains at least one string with more than 10 characters.*/
+
+const string =  ['a', 'ejtjjtjtjtjtjtjtjtjtjtjtj'];
+
+const check = string.some(item => item.length < 10);
+console.log(check);
+
+
+/*
+12. push()
+Problem: Add the number 100 to the end of an array.
+solution below */
+function pushMethod() {
+    const numarr = [1,2,3,4,5,6,7];
+    const addValue = numarr.push(100);
+    console.log(addValue);
+
+    console.log(numarr);
+}
+
+pushMethod();
+
+/*
+13. pop()
+Problem: Remove the last element from an array and return it. */
+
+const popArr = [1,2,3,4,5,6];
+const removeElement = popArr.pop();
+
+console.log(popArr);
+
+
+/*
+14. shift()
+Problem: Remove the first element from an array and return it. */
+
+function shiftMethod() {
+    const  diet = ['orange', 'rice', 'beans', 'garri'];
+    const shiftElement = diet.shift();
+
+    console.log(shiftElement);
+}
+
+shiftMethod();
+
+/*15. unshift()
+Problem: Add the number 1 at the beginning of an array. */
+
+function unshiftMethod() {
+    const carModel = ['range', 'toyota', 'suzuki'];
+    const  addNew = carModel.unshift('lexus');
+    console.log(carModel);
+    console.log(addNew);
+}
+unshiftMethod();
+
+
+
+/*
+
+Problem: Reverse the order of an array without using loops.
+21. sort()
+Problem: Sort an array of numbers in ascending order.
+22. flat()
+Problem: Flatten a nested array [1, [2, [3, 4]], 5] into a single-level array.*/
+
+/*16. slice()
+Problem: Given an array, return the first three elements without modifying the original array.
+solution below */
+
+function sliceMethod() {
+    const carItem = ['ivm', 'range', 'maybach'];
+
+    const removeIndex = carItem.slice(1,2);
+
+    console.log(carItem);
+    console.log(removeIndex);
+}
+
+sliceMethod();
+
+
+/*17. splice()
+Problem: Remove the second element from an array and insert "New Element" in its place.
+solution below */
+
+function spliceMethod() {
+    const countItem = ['bread', 'biscuit', 'floor', 'pie', 'cake'];
+    const spliceElement = countItem.splice(1,2,"berry");
+    console.log(countItem);
+    console.log(spliceElement);
+}
+spliceMethod();
+
+
+/*
+18. concat()
+Problem: Merge two arrays and return the new array. */
+
+function concatMethod() {
+    const  priceOfCar  = ["$20", "$50"];
+    const carModel = [1997, 1998,];
+
+    const addUp = priceOfCar.concat(carModel);
+
+    console.log(addUp);
+}
+concatMethod();
+
+
+/*19. join()
+Problem: Convert an array of words into a single sentence string separated by spaces.
+20. reverse() */
+
+function joinMethod() {
+    const  words = ['moses',  'is',  'a',  'good',  'man'];
+
+    const sentence = words.join("");
+
+    console.log(sentence);
+}
+joinMethod();
